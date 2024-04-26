@@ -1,0 +1,148 @@
+*{
+    font-family:sofia sans;
+}
+
+body{
+        background-color: #C5CBE5;
+        text-transform: none; 
+        position: relative;
+        min-height: 100vh;
+}
+    
+header{
+        
+        width: 100%;
+        height: 150px;
+        background: #23347D;
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        display: flex;
+        position: relative;
+}
+main{
+    display:block
+}
+    
+footer {
+        padding: 20px;
+        background: #23347D;
+        text-align: center;
+        display: flex;
+        position:absolute;
+        bottom: 0%;
+        position: fixed;
+        width: 100%;
+        height:3em;
+}
+footer img.logo {
+                position:fixed;
+                object-position: 100%;
+                left: 50%;
+                display: flex;
+                transform: translate(-50%);
+                justify-content: center;
+                max-width: 20%;
+                height: 10%;
+                margin: 0;
+                filter: invert(1);
+
+}
+
+.TituloPrincipal{
+    text-align: center;
+    color: rgba(214, 200, 200, 1);
+    text-transform: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    text-align: center;
+}
+
+    .contenedorflex {
+        display: flex;
+        align-items: center;
+        height: auto;
+    }
+    
+    .textoflex{
+        display: flex;
+        justify-content:right;
+        color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+        font-style normal;
+        margin-left: 0.5%;
+    }
+    .fotocarnet{
+        width: 30%;
+        height: 20%;
+        margin-right: 10%;
+        margin-left: 10%;
+        display:flex;
+        justify-content:left;
+    }
+
+
+@media  (max-width: 550px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .contenedorflex{
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+        margin-top: 2%;
+        padding: 10%;
+    }
+    .fotocarnet {
+        display:flex;
+        margin: 0%;
+        width: 60%;
+        height: 10%;
+    }
+    .textoflex {
+    text-align: left;
+    display: flex;
+    flex-direction:column;
+    position:center;
+    margin: 3%;
+    }
+
+    header{
+        
+
+
+        margin: auto;
+        display: flex;
+        position: relative;
+}
+
+    footer {
+        margin: auto;
+        background: #23347D;
+        text-align: center;
+        display: flex;
+        position:fixed;
+        width: 89%;
+        height: 3em;
+
+
+}
+footer img.logo {
+                position:center;
+                justify-content: center;
+                max-width: 20%;
+                height: 5%;
+                margin: 2%;
+                filter: invert(1);
+
+}
+
+    
+}
