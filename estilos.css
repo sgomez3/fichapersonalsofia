@@ -1,148 +1,136 @@
-*{
-    font-family:sofia sans;
+body {
+    background-color: #C5CBE5;
+    margin: 0; /* Eliminar margen predeterminado del cuerpo */
+    font-family: 'Sofia Sans';
 }
 
-body{
-        background-color: #C5CBE5;
-        text-transform: none; 
-        position: relative;
-        min-height: 100vh;
-}
-    
-header{
-        
-        width: 100%;
-        height: 150px;
-        background: #23347D;
-        text-align: center;
-        align-items: center;
-        margin: auto;
-        display: flex;
-        position: relative;
-}
-main{
-    display:block
-}
-    
-footer {
-        padding: 20px;
-        background: #23347D;
-        text-align: center;
-        display: flex;
-        position:absolute;
-        bottom: 0%;
-        position: fixed;
-        width: 100%;
-        height:3em;
-}
-footer img.logo {
-                position:fixed;
-                object-position: 100%;
-                left: 50%;
-                display: flex;
-                transform: translate(-50%);
-                justify-content: center;
-                max-width: 20%;
-                height: 10%;
-                margin: 0;
-                filter: invert(1);
-
-}
-
-.TituloPrincipal{
+header {
+    background-color: #23347D;
+    width: 100%;
     text-align: center;
-    color: rgba(214, 200, 200, 1);
-    text-transform: none;
-    margin: auto;
+    padding: 0;
     display: flex;
-    justify-content: center;
-
+    flex-direction: column;
     align-items: center;
-    text-align: center;
 }
 
-    .contenedorflex {
-        display: flex;
-        align-items: center;
-        height: auto;
-    }
-    
-    .textoflex{
-        display: flex;
-        justify-content:right;
-        color: black;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-        font-style normal;
-        margin-left: 0.5%;
-    }
-    .fotocarnet{
-        width: 30%;
-        height: 20%;
-        margin-right: 10%;
-        margin-left: 10%;
-        display:flex;
-        justify-content:left;
-    }
+.centrada h1 {
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 50px;
+}
 
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
 
-@media  (max-width: 550px) {
+.contenedorflex {
+    display: flex;
+    align-items: flex-start; /* Alinea la parte superior de la imagen y el texto */
+    gap: 70px; /* Espacio entre la imagen y el texto */
+    max-width: 1700px; /* Máximo ancho del contenedor flex */
+    width: 100%; /* Ancho del contenedor flex */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    border-radius: 10px; /* Bordes redondeados */
+}
 
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .contenedorflex{
-        display: flex;
-        flex-direction: column;
-        margin: 2%;
-        margin-top: 2%;
-        padding: 10%;
-    }
-    .fotocarnet {
-        display:flex;
-        margin: 0%;
-        width: 60%;
-        height: 10%;
-    }
-    .textoflex {
+.fotocarnet {
+    max-width: 450px; /* Ancho fijo para la imagen */
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 40px;
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.textoflex {
     text-align: left;
     display: flex;
-    flex-direction:column;
-    position:center;
-    margin: 3%;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio entre el inicio y el final */
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+    font-size: 27px;
+}
+
+.textoflex p {
+    margin: 0; /* Elimina el margen predeterminado */
+    line-height: 1.5; /* Espacio entre las líneas */
+}
+
+.textoflex a {
+    color: #23347D; /* Color de los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold;
+}
+
+.textoflex a:hover {
+    text-decoration: underline; /* Subraya los enlaces al pasar el ratón */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color:#23347D;
+    opacity: 0.75;
+    text-align: center; /* Centrar el texto horizontalmente */
+    padding: 10px 0; /* Espaciado vertical */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra para separación visual */
+    width: 100%; /* Ancho completo */
+    font-size: 14px; /* Tamaño de fuente */
+    color: #ffffff;
+    position: relative; /* Cambia a relativo para comportamiento normal */
+}
+
+footer img.logo {
+    max-height: 40px; /* Ajusta la altura de la imagen */
+    width: auto; /* Mantiene la proporción de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0; /* Elimina el margen adicional */
+    object-fit: contain; /* Ajusta la imagen para que se adapte al contenedor */
+    filter: invert(1); /* Invertir los colores de la imagen */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .centrada h1 {
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.2;
     }
 
-    header{
-        
+    .contenedorflex {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra el contenido horizontalmente */
+        gap: 20px; /* Reduce el espacio entre elementos */
+        max-width: 100%; /* Asegura que el contenedor no se salga de la pantalla */
+        padding: 10px; /* Reduce el padding interno */
+    }
 
+    .fotocarnet {
+        max-width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+        width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+        margin-left: 0; /* Elimina el margen izquierdo */
+    }
 
-        margin: auto;
-        display: flex;
-        position: relative;
-}
+    .textoflex {
+        align-items: center; /* Centra el texto en el eje horizontal */
+        text-align: left; /* Centra el texto */
+        font-size: 16px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+    }
 
     footer {
-        margin: auto;
-        background: #23347D;
-        text-align: center;
-        display: flex;
-        position:fixed;
-        width: 89%;
-        height: 3em;
+        padding: 10px; /* Ajusta el padding */
+        font-size: 12px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+        position: static; /* Cambia a estático para no cubrir el contenido */
+    }
 
-
-}
-footer img.logo {
-                position:center;
-                justify-content: center;
-                max-width: 20%;
-                height: 5%;
-                margin: 2%;
-                filter: invert(1);
-
-}
-
-    
+    footer img.logo {
+        max-height: 30px; /* Ajusta la altura de la imagen en dispositivos móviles */
+    }
 }
